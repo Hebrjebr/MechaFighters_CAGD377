@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 public class AlienBehaviour : MonoBehaviour
 {
-    public int alienHealth = 1; // Can be changed
+    public int alienHealth = 2; // Can be changed
     public int alienDamage = 1; // Can be changed
     public Text healthDisplay;
 
@@ -24,6 +24,7 @@ public class AlienBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+            
         if (alienHealth == 0) Destroy(gameObject);
     }
 }

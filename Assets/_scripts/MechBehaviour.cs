@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 public class MechHealth : MonoBehaviour
 {
-    public int mechHealth = 1; // Can be changed
+    public int mechHealth = 2; // Can be changed
     public int mechDamage = 1; // Can be changed
     public Text healthDisplay;
 
