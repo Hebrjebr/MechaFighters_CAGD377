@@ -24,6 +24,12 @@ public class MechHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Reduce health manually for testing
+        if (Input.GetKey(KeyCode.E))
+        {
+            print ("Mech Health Reduced");
+            mechHealth--;
+        }
         if (mechHealth == 0) Destroy(gameObject);
     }
 }
