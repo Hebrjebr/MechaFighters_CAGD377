@@ -11,9 +11,11 @@ using System.Collections.Generic;
 
 public class MechHealth : MonoBehaviour
 {
-    public int mechHealth = 2; // Can be changed
+    public float mechHealth = 10; // Can be changed
     public int mechDamage = 1; // Can be changed
     public Text healthDisplay;
+
+    Coroutine damage;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,12 +26,15 @@ public class MechHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Reduce health manually for testing
-        if (Input.GetKey(KeyCode.E))
-        {
-            print ("Mech Health Reduced");
-            mechHealth--;
-        }
-        if (mechHealth == 0) Destroy(gameObject);
+        // Reduce health every second
+        damage = StartCoroutine(DamageTest());
+        if (mechHealth <= 0) Destroy(gameObject);
+    }
+
+    IEnumerator DamageTest()
+    {
+        mechHealth -= 1 * Time.deltaTime;
+        print("Mech Health decreased");
+        yield return new WaitForSeconds(2f);
     }
 }
