@@ -13,9 +13,6 @@ public class MechHealth : MonoBehaviour
     public float mechHealth = 5; // Can be changed
     public int mechDamage = 1; // Can be changed
 
-    public GameObject mechaType;
-    public bool hasMech;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

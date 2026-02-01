@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2110275626930778748}
   - component: {fileID: 5108982989977490345}
   - component: {fileID: 3289551043613318820}
-  - component: {fileID: 4076052967005244617}
+  - component: {fileID: 9165782824345126021}
+  - component: {fileID: -731876635409838002}
   m_Layer: 0
   m_Name: MechAsset_Test
   m_TagString: Untagged
@@ -113,7 +114,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4076052967005244617
+--- !u!114 &9165782824345126021
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,6 +126,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d5c09bdb629cd49804614a508d93d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MechHealth
-  mechHealth: 1
+  mechHealth: 5
   mechDamage: 1
-  healthDisplay: {fileID: 0}
+--- !u!114 &-731876635409838002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071353032682823514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066d0ed25c7ffc242a55b9cfd60b560c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechGridSystem
+  mechaType: {fileID: 7071353032682823514}
+  tileSize: 5
