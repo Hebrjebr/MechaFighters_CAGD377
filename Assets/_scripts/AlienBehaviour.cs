@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -11,31 +10,24 @@ using System.Collections.Generic;
 
 public class AlienBehaviour : MonoBehaviour
 {
-    public float alienHealth = 10; // Can be changed
-    public int alienDamage = 1; // Can be changed
-    public Text healthDisplay;
+    [SerializeField] private float alienSpeed; // How fast does the alien move?
+    public float alienHealth = 10; // How many hits can the alien take?
 
-    Coroutine damage;
+    public float alienDamage = 1; // How much damage does the alien do per hit?
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        healthDisplay = GetComponent<Text>();
+
     }
 
-    // Update is called once per frame
     // Update is called once per frame
     void Update()
     {
-        // Reduce health every second
-        damage = StartCoroutine(DamageTest());
-        if (alienHealth <= 0) Destroy(gameObject);
+        
     }
-
-    IEnumerator DamageTest()
+    private void FixedUpdate()
     {
-        alienHealth -= 1 * Time.deltaTime;
-        print("Alien Health decreasing");
-        yield return new WaitForSeconds(2f);
+        transform.position -= new Vector3(alienSpeed, 0, 0);
     }
 }
