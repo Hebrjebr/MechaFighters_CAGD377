@@ -125,6 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0399be7be76d71c4cbe505bda6593361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AlienBehaviour
-  alienSpeed: 0.01
+  alienSpeed: 0.02
   alienHealth: 1
   alienDamage: 1
