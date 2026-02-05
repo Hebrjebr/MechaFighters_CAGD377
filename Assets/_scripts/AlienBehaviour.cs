@@ -30,4 +30,18 @@ public class AlienBehaviour : MonoBehaviour
     {
         transform.position -= new Vector3(alienSpeed, 0, 0);
     }
+
+    /// <summary>
+    /// Detect collision with other objects
+    /// </summary>
+    /// <param name="other"></param>
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<BasicProjectile>())
+        {
+            print("Alien has lost health");
+            alienHealth -= 1;
+            Destroy(other.gameObject);
+        }
+    }
 }

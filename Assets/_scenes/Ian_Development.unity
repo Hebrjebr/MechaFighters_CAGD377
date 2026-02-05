@@ -119,6 +119,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &152600808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7071353032682823514, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+  m_PrefabInstance: {fileID: 1671057817}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &152600809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152600808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12557868fefc5a4fb896b927d9a82fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GuardMech
+  mechaProjectile: {fileID: 6343422258014003746, guid: f8b902d6168476547b0e837c6ac22281, type: 3}
+  fireDelay: 1
+  fireRate: 1
 --- !u!1 &179281210
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
       propertyPath: m_LocalRotation.x
@@ -526,7 +546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
       propertyPath: m_LocalRotation.z
@@ -538,7 +558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -548,10 +568,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MechAsset_Test
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -731876635409838002, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7071353032682823514, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 152600809}
   m_SourcePrefab: {fileID: 100100000, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
 --- !u!1 &1722139492
 GameObject:
