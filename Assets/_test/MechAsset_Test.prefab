@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5108982989977490345}
   - component: {fileID: 3289551043613318820}
   - component: {fileID: 9165782824345126021}
-  - component: {fileID: -731876635409838002}
   - component: {fileID: 7030006264006166225}
+  - component: {fileID: 6848808014307723937}
   m_Layer: 0
   m_Name: MechAsset_Test
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7071353032682823514}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.76, y: 0.74, z: 0}
+  m_LocalPosition: {x: -1.76, y: 0.7399998, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -129,20 +129,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MechHealth
   mechHealth: 5
   mechDamage: 1
---- !u!114 &-731876635409838002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7071353032682823514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 066d0ed25c7ffc242a55b9cfd60b560c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MechGridSystem
-  mechaType: {fileID: 7071353032682823514}
-  tileSize: 5
 --- !u!114 &7030006264006166225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +144,15 @@ MonoBehaviour:
   mechaProjectile: {fileID: 6343422258014003746, guid: f8b902d6168476547b0e837c6ac22281, type: 3}
   fireDelay: 1
   fireRate: 1
+--- !u!156049354 &6848808014307723937
+Grid:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071353032682823514}
+  m_Enabled: 1
+  m_CellSize: {x: 5, y: 5, z: 5}
+  m_CellGap: {x: 0, y: 0, z: 0}
+  m_CellLayout: 0
+  m_CellSwizzle: 0

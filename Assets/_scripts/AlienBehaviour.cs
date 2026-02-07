@@ -29,6 +29,7 @@ public class AlienBehaviour : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position -= new Vector3(alienSpeed, 0, 0);
+        if (alienHealth <= 0) Destroy(gameObject); // When health at most 0, destroy
     }
 
     /// <summary>

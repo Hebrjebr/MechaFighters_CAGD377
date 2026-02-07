@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7051147365881949396}
   - component: {fileID: 4421025318921799180}
   - component: {fileID: -9061519226371775706}
+  - component: {fileID: 6363104225125878098}
   m_Layer: 0
   m_Name: AlienAsset_Test
   m_TagString: Untagged
@@ -126,5 +127,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AlienBehaviour
   alienSpeed: 0.02
-  alienHealth: 1
+  alienHealth: 10
   alienDamage: 1
+--- !u!54 &6363104225125878098
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4255970654443058298}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

@@ -119,26 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &152600808 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7071353032682823514, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-  m_PrefabInstance: {fileID: 1671057817}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &152600809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152600808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e12557868fefc5a4fb896b927d9a82fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GuardMech
-  mechaProjectile: {fileID: 6343422258014003746, guid: f8b902d6168476547b0e837c6ac22281, type: 3}
-  fireDelay: 1
-  fireRate: 1
 --- !u!1 &179281210
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +131,8 @@ GameObject:
   - component: {fileID: 179281212}
   - component: {fileID: 179281211}
   - component: {fileID: 179281214}
+  - component: {fileID: 179281215}
+  - component: {fileID: 179281216}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -226,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 179281210}
   serializedVersion: 2
   m_LocalRotation: {x: 0.47315693, y: -0, z: -0, w: 0.8809782}
-  m_LocalPosition: {x: 0, y: 15.94, z: -13.68}
+  m_LocalPosition: {x: 0, y: 23.22, z: -18.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -276,6 +258,39 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &179281215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179281210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55d1579950f1624a9174a1e0c432279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GridTestInput
+  cam: {fileID: 179281212}
+  lastPos: {x: 0, y: 0, z: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &179281216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179281210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066d0ed25c7ffc242a55b9cfd60b560c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechGridSystem
+  mechaPrefab: {fileID: 7071353032682823514, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+  mecha: {fileID: 7071353032682823514, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+  grid: {fileID: 6848808014307723937, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+  gridInput: {fileID: 179281215}
 --- !u!1 &370698874
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,71 +527,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1722139493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1671057817
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -731876635409838002, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4368329178943743373, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7071353032682823514, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      propertyPath: m_Name
-      value: MechAsset_Test
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -731876635409838002, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7071353032682823514, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 152600809}
-  m_SourcePrefab: {fileID: 100100000, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
 --- !u!1 &1722139492
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,4 +749,3 @@ SceneRoots:
   - {fileID: 2112725290}
   - {fileID: 513455541}
   - {fileID: 1722139493}
-  - {fileID: 1671057817}
