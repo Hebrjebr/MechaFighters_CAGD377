@@ -13,7 +13,7 @@ public class AlienBehaviour : MonoBehaviour
     [Header("References")]
     [SerializeField] private float alienSpeed; // How fast does the alien move?
     public float alienHealth = 10; // How many hits can the alien take?
-    public float aliensDestroyed = 0;
+    public float aliensScore = 0;
     public float alienDamage = 1; // How much damage does the alien do per hit?
     public Rigidbody rb;
 
@@ -33,8 +33,8 @@ public class AlienBehaviour : MonoBehaviour
         transform.position -= new Vector3(alienSpeed, 0, 0);
         if (alienHealth <= 0)
         {
-            aliensDestroyed++; // Increment Aliens Destroyed counter
-            Destroy(gameObject); // When health at most 0, destroy
+            aliensScore += 10; // Add 10 to the score
+            gameObject.SetActive(false);
             if (randDrop <= 3)
             {
                 randDrop = Random.Range(0, dropPrefab.Length); // Which Item?

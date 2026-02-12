@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AlienBehaviour
   alienSpeed: 0.02
-  alienHealth: 10
+  alienHealth: 1
   aliensDestroyed: 0
   alienDamage: 1
   rb: {fileID: 6363104225125878098}

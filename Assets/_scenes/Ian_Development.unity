@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 124892866}
   - component: {fileID: 124892865}
   m_Layer: 5
-  m_Name: Aliens Destroyed UI
+  m_Name: Aliens Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -457,8 +457,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ceffc8289a0f8468d54902a568e8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AlienManager
-  aliens: {fileID: 0}
-  alienCount: {fileID: 124892865}
+  aliens: {fileID: -9061519226371775706, guid: ab641f3fa72dd6147a874ed9111d90e7, type: 3}
+  alienScore: {fileID: 124892865}
 --- !u!4 &349288534
 Transform:
   m_ObjectHideFlags: 0
