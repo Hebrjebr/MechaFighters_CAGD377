@@ -10,26 +10,42 @@ using System.Collections.Generic;
 
 public class AlienBehaviour : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] private float alienSpeed; // How fast does the alien move?
     public float alienHealth = 10; // How many hits can the alien take?
-
+    public float aliensDestroyed = 0;
     public float alienDamage = 1; // How much damage does the alien do per hit?
+    public Rigidbody rb;
+
+    [Header("Drops")]
+    public GameObject[] dropPrefab;
+    [SerializeField] private int randDrop = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        rb = GetComponent<Rigidbody>();
+        randDrop = Random.Range(1, 10);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void FixedUpdate()
     {
         transform.position -= new Vector3(alienSpeed, 0, 0);
-        if (alienHealth <= 0) Destroy(gameObject); // When health at most 0, destroy
+        if (alienHealth <= 0)
+        {
+            aliensDestroyed++; // Increment Aliens Destroyed counter
+            Destroy(gameObject); // When health at most 0, destroy
+            if (randDrop <= 3)
+            {
+                randDrop = Random.Range(0, dropPrefab.Length); // Which Item?
+                if (randDrop < dropPrefab.Length)
+                {
+                    // Drop the item
+                    GameObject newDrop = Instantiate(dropPrefab[randDrop], transform.position, transform.rotation);
+                    Debug.Log("Enemy Drops Item " + randDrop + 1); // Debug
+                }
+            }
+        }
     }
 
     /// <summary>

@@ -128,7 +128,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AlienBehaviour
   alienSpeed: 0.02
   alienHealth: 10
+  aliensDestroyed: 0
   alienDamage: 1
+  rb: {fileID: 6363104225125878098}
+  dropPrefab:
+  - {fileID: 8433270867111571500, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
+  - {fileID: 1964335195985990639, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
+  randDrop: 0
 --- !u!54 &6363104225125878098
 Rigidbody:
   m_ObjectHideFlags: 0
