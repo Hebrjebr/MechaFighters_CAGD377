@@ -57,7 +57,6 @@ public class AlienBehaviour : MonoBehaviour
         {
             gm.alienCount++;
             gm.alienTotal += alienScore;
-            Destroy(this.gameObject);
             if (randDrop <= 3)
             {
                 randDrop = Random.Range(0, dropPrefab.Length); // Which Item?
@@ -68,6 +67,7 @@ public class AlienBehaviour : MonoBehaviour
                     Debug.Log("Enemy Drops Item " + randDrop + 1); // Debug
                 }
             }
+            Destroy(gameObject);
         }
     }
 }
