@@ -13,9 +13,12 @@ public class AlienBehaviour : MonoBehaviour
     [Header("References")]
     [SerializeField] private float alienSpeed; // How fast does the alien move?
     public float alienHealth = 10; // How many hits can the alien take?
-    public float aliensScore = 0;
+    public float aliensDestroyed = 0;
     public float alienDamage = 1; // How much damage does the alien do per hit?
     public Rigidbody rb;
+
+    public GameManager gm;
+    public int alienScore;
 
     [Header("Drops")]
     public GameObject[] dropPrefab;
@@ -31,21 +34,11 @@ public class AlienBehaviour : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position -= new Vector3(alienSpeed, 0, 0);
-        if (alienHealth <= 0)
-        {
-            aliensScore += 10; // Add 10 to the score
-            gameObject.SetActive(false);
-            if (randDrop <= 3)
-            {
-                randDrop = Random.Range(0, dropPrefab.Length); // Which Item?
-                if (randDrop < dropPrefab.Length)
-                {
-                    // Drop the item
-                    GameObject newDrop = Instantiate(dropPrefab[randDrop], transform.position, transform.rotation);
-                    Debug.Log("Enemy Drops Item " + randDrop + 1); // Debug
-                }
-            }
-        }
+    }
+
+    private void OnDestroy()
+    {
+        aliensDestroyed++;
     }
 
     /// <summary>
@@ -59,6 +52,22 @@ public class AlienBehaviour : MonoBehaviour
             print("Alien has lost health");
             alienHealth -= 1;
             Destroy(other.gameObject);
+        }
+        if (alienHealth <= 0)
+        {
+            gm.alienCount++;
+            gm.alienTotal += alienScore;
+            Destroy(this.gameObject);
+            if (randDrop <= 3)
+            {
+                randDrop = Random.Range(0, dropPrefab.Length); // Which Item?
+                if (randDrop < dropPrefab.Length)
+                {
+                    // Drop the item
+                    GameObject newDrop = Instantiate(dropPrefab[randDrop], transform.position, transform.rotation);
+                    Debug.Log("Enemy Drops Item " + randDrop + 1); // Debug
+                }
+            }
         }
     }
 }

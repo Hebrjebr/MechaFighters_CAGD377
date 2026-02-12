@@ -7,7 +7,8 @@ public class AlienManager : MonoBehaviour
 {
     // Initialize Variables
     public AlienBehaviour aliens; // Reference to the aliens destroyed by the player
-    public TMP_Text alienScore;
+    public float alienTotal;
+    public TMP_Text text;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,6 +19,7 @@ public class AlienManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        alienScore.text = "SCORE: " + aliens.aliensScore.ToString();
+        alienTotal = aliens.aliensDestroyed;
+        text.text = "" + alienTotal.ToString();
     }
 }

@@ -109,7 +109,7 @@ SphereCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5
@@ -131,6 +131,7 @@ MonoBehaviour:
   aliensDestroyed: 0
   alienDamage: 1
   rb: {fileID: 6363104225125878098}
+  gm: {fileID: 6739327112396995421, guid: 58cdffbb5125ed246b8a1f588e152907, type: 3}
   dropPrefab:
   - {fileID: 8433270867111571500, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
   - {fileID: 1964335195985990639, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
