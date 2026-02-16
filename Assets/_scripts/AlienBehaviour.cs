@@ -12,13 +12,18 @@ public class AlienBehaviour : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private float alienSpeed; // How fast does the alien move?
+    public GameManager gm;
+    public Rigidbody rb;
+    public MechHealth mech;
+
+    [Header("Attributes")]
     public float alienHealth = 10; // How many hits can the alien take?
     public float aliensDestroyed = 0;
     public float alienDamage = 1; // How much damage does the alien do per hit?
-    public Rigidbody rb;
-
-    public GameManager gm;
     public int alienScore;
+    public float range = 0.5f;
+
+    public bool canMove = true;
 
     [Header("Drops")]
     public GameObject[] dropPrefab;
@@ -31,14 +36,25 @@ public class AlienBehaviour : MonoBehaviour
         randDrop = Random.Range(1, 10);
     }
 
-    private void FixedUpdate()
+    void Update()
     {
-        transform.position -= new Vector3(alienSpeed, 0, 0);
+        if (canMove == true)
+        {
+            AlienMovement();
+        }
     }
 
-    private void OnDestroy()
+    private void FixedUpdate()
     {
-        aliensDestroyed++;
+        
+    }
+
+    /// <summary>
+    /// Alien Moves slowly towards the left side of the screen
+    /// </summary>
+    private void AlienMovement()
+    {
+        transform.position -= new Vector3(alienSpeed, 0, 0);
     }
 
     /// <summary>

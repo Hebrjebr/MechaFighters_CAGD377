@@ -22,7 +22,14 @@ public class MechHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (mechHealth <= 0) Destroy(this.gameObject);
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.GetComponent<Hitbox>())
+        {
+            mechHealth -= 1 * Time.deltaTime;
+        }
+    }
 }
