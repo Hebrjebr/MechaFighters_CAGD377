@@ -12,6 +12,9 @@ public class BasicProjectile : MonoBehaviour
 {
     // Initialize Variables
     [SerializeField] private float projectileSpeed; // Speed of projectile
+    public float projectileDamage = 1f;
+
+    public MechHealth mech;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,7 +25,7 @@ public class BasicProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * projectileSpeed * Time.deltaTime); // The projectile moves forward
+        transform.Translate(Vector3.forward * (projectileSpeed + mech.speedModifier) * Time.deltaTime); // The projectile moves forward
     }
 
     private void RemoveProjectile()

@@ -158,10 +158,9 @@ MonoBehaviour:
   gm: {fileID: 6739327112396995421, guid: 58cdffbb5125ed246b8a1f588e152907, type: 3}
   rb: {fileID: 6363104225125878098}
   mech: {fileID: 9165782824345126021, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
-  alienHealth: 1
-  aliensDestroyed: 0
+  bullet: {fileID: 2850746647167219046, guid: f8b902d6168476547b0e837c6ac22281, type: 3}
+  alienHealth: 10
   alienDamage: 1
-  alienScore: 0
   range: 0.5
   canMove: 1
   dropPrefab:

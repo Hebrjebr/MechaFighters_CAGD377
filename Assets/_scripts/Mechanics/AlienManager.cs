@@ -6,9 +6,6 @@ using TMPro;
 public class AlienManager : MonoBehaviour
 {
     // Initialize Variables
-    public AlienBehaviour aliens; // Reference to the aliens destroyed by the player
-    public float alienTotal;
-    public TMP_Text text;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,7 +16,6 @@ public class AlienManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        alienTotal = aliens.aliensDestroyed;
-        text.text = "" + alienTotal.ToString();
+
     }
 }

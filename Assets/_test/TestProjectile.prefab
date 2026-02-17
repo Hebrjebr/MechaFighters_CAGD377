@@ -126,4 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicProjectile
   projectileSpeed: 10
-  alien: {fileID: -9061519226371775706, guid: ab641f3fa72dd6147a874ed9111d90e7, type: 3}
+  projectileDamage: 1
+  mech: {fileID: 9165782824345126021, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}

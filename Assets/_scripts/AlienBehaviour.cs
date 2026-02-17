@@ -15,12 +15,11 @@ public class AlienBehaviour : MonoBehaviour
     public GameManager gm;
     public Rigidbody rb;
     public MechHealth mech;
+    public BasicProjectile bullet;
 
     [Header("Attributes")]
-    public float alienHealth = 10; // How many hits can the alien take?
-    public float aliensDestroyed = 0;
-    public float alienDamage = 1; // How much damage does the alien do per hit?
-    public int alienScore;
+    public float alienHealth = 10f; // How many hits can the alien take?
+    public float alienDamage = 1f; // How much damage does the alien do per hit?
     public float range = 0.5f;
 
     public bool canMove = true;
@@ -66,13 +65,11 @@ public class AlienBehaviour : MonoBehaviour
         if (other.gameObject.GetComponent<BasicProjectile>())
         {
             print("Alien has lost health");
-            alienHealth -= 1;
+            alienHealth -= bullet.projectileDamage + mech.mechDamage;
             Destroy(other.gameObject);
         }
         if (alienHealth <= 0)
         {
-            gm.alienCount++;
-            gm.alienTotal += alienScore;
             if (randDrop <= 3)
             {
                 randDrop = Random.Range(0, dropPrefab.Length); // Which Item?
