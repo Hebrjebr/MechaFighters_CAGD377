@@ -15,12 +15,21 @@ public class GuardMech : MonoBehaviour
     // Initialize Variables
     [Header("References")]
     public GameObject mechaProjectile;
-    [SerializeField] private float fireDelay, fireRate; // Serialize Field for testing
+    [SerializeField] private float fireDelay, fireRate, fireRange; // Serialize Field for testing
+    public Transform targetObject;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InvokeRepeating("Projectile", fireDelay, fireRate); // Shoot
+        Vector3 origin = transform.position;
+        Vector3 direction = transform.forward * fireRange;
+
+        RaycastHit hit;
+        Debug.DrawRay(origin, direction, Color.green, fireRange);
+        if (Physics.Raycast(origin, direction, out hit, fireRange) && (hit.collider.transform == targetObject))
+        {
+            InvokeRepeating("Projectile", fireDelay, fireRate); // Shoot
+        }
     }
 
     // Update is called once per frame
@@ -36,6 +45,7 @@ public class GuardMech : MonoBehaviour
     {
         GameObject projPrefab = Instantiate(mechaProjectile, transform.position, transform.rotation);
     }
+
 }
 
 // Bingus

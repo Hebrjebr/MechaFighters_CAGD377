@@ -428,6 +428,17 @@ MonoBehaviour:
   mecha: {fileID: 7071353032682823514, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
   grid: {fileID: 6848808014307723937, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
   gridInput: {fileID: 179281215}
+--- !u!114 &236505237 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9165782824345126021, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+  m_PrefabInstance: {fileID: 1798289621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d5c09bdb629cd49804614a508d93d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechHealth
 --- !u!1 &370698874
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,63 +719,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648763882}
   m_CullTransparentMesh: 1
---- !u!1001 &816167485
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6336931384128299619, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -13.720194
-      objectReference: {fileID: 0}
-    - target: {fileID: 6336931384128299619, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.12499988
-      objectReference: {fileID: 0}
-    - target: {fileID: 6336931384128299619, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 14.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6336931384128299619, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6336931384128299619, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6336931384128299619, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6336931384128299619, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6336931384128299619, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6336931384128299619, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6336931384128299619, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8433270867111571500, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
-      propertyPath: m_Name
-      value: TestPlasma
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9f0bbe1cf323cdf4f8ac10295a00669e, type: 3}
 --- !u!1 &963350409
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,63 +781,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1722139493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1198806850
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 453110160541021220, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -13.720194
-      objectReference: {fileID: 0}
-    - target: {fileID: 453110160541021220, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.12499988
-      objectReference: {fileID: 0}
-    - target: {fileID: 453110160541021220, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 18.560001
-      objectReference: {fileID: 0}
-    - target: {fileID: 453110160541021220, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 453110160541021220, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453110160541021220, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453110160541021220, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453110160541021220, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453110160541021220, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 453110160541021220, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964335195985990639, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
-      propertyPath: m_Name
-      value: TestCoal
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 49f1384fddf32b4408a0abb3eeb6df56, type: 3}
 --- !u!1 &1227827505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +965,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AlienSpawner
   spawners:
-  - {fileID: 370698875}
   - {fileID: 1619706078}
   - {fileID: 963350410}
   aliens: {fileID: 4255970654443058298, guid: ab641f3fa72dd6147a874ed9111d90e7, type: 3}
@@ -1201,16 +1097,32 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7030006264006166225, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+      propertyPath: mech
+      value: 
+      objectReference: {fileID: 236505237}
+    - target: {fileID: 7030006264006166225, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
       propertyPath: fireRate
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7030006264006166225, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
       propertyPath: fireDelay
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7030006264006166225, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+      propertyPath: fireRange
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030006264006166225, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+      propertyPath: mechaProjectile
+      value: 
+      objectReference: {fileID: 6343422258014003746, guid: 64ab54ac6e3177945b8f4aeba6f45073, type: 3}
     - target: {fileID: 7071353032682823514, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
       propertyPath: m_Name
       value: CoalMech
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165782824345126021, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+      propertyPath: mechRange
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 9165782824345126021, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
       propertyPath: mechDamage
@@ -1289,9 +1201,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7030006264006166225, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+      propertyPath: mech
+      value: 
+      objectReference: {fileID: 1986876761}
+    - target: {fileID: 7030006264006166225, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+      propertyPath: fireRange
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7071353032682823514, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
       propertyPath: m_Name
       value: PlasmaMech
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165782824345126021, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+      propertyPath: mechRange
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 9165782824345126021, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
       propertyPath: mechDamage
@@ -1333,6 +1257,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1722139493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1986876761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9165782824345126021, guid: 0e0dd6a7e2581a14b956ee12d7364c88, type: 3}
+  m_PrefabInstance: {fileID: 1831061881}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d5c09bdb629cd49804614a508d93d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MechHealth
 --- !u!1001 &1990777246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1613,8 +1548,6 @@ SceneRoots:
   - {fileID: 1990777246}
   - {fileID: 1831061881}
   - {fileID: 1798289621}
-  - {fileID: 816167485}
-  - {fileID: 1198806850}
   - {fileID: 1227827506}
   - {fileID: 1780803030}
   - {fileID: 4062844854614065799}
