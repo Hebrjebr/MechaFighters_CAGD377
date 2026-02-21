@@ -11,9 +11,6 @@ using System.Collections.Generic;
 public class MechHealth : MonoBehaviour
 {
     public float mechHealth = 5; // Can be changed
-    public int mechDamage; // Can be changed
-    public float speedModifier;
-
     public AlienBehaviour alien;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

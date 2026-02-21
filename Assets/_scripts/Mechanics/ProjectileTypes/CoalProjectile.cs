@@ -4,15 +4,15 @@ using UnityEngine;
 
 /*
  * Name: Ian Phurchpean
- * Date: 4 February 2026
- * Objective: Basic Mecha Projectile.
+ * Date: 17 February 2026
+ * Objective: Coal Mecha Projectile.
  */
 
-public class BasicProjectile : MonoBehaviour
+public class CoalProjectile : MonoBehaviour
 {
     // Initialize Variables
     [SerializeField] private float projectileSpeed; // Speed of projectile
-    public float projectileDamage = 1f;
+    public float projectileDamage = 5f;
 
     public MechHealth mech;
 
@@ -33,5 +33,3 @@ public class BasicProjectile : MonoBehaviour
         Destroy(gameObject); // Deload object to prevent lagspikes
     }
 }
-
-// Bingus

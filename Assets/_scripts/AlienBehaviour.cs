@@ -15,7 +15,6 @@ public class AlienBehaviour : MonoBehaviour
     public GameManager gm;
     public Rigidbody rb;
     public MechHealth mech;
-    public BasicProjectile bullet;
 
     [Header("Attributes")]
     public float alienHealth = 10f; // How many hits can the alien take?
@@ -41,6 +40,21 @@ public class AlienBehaviour : MonoBehaviour
         {
             AlienMovement();
         }
+
+        if (alienHealth <= 0)
+        {
+            if (randDrop <= 3)
+            {
+                randDrop = Random.Range(0, dropPrefab.Length); // Which Item?
+                if (randDrop < dropPrefab.Length)
+                {
+                    // Drop the item
+                    GameObject newDrop = Instantiate(dropPrefab[randDrop], transform.position, transform.rotation);
+                    Debug.Log("Enemy Drops Item " + randDrop + 1); // Debug
+                }
+            }
+            Destroy(gameObject);
+        }
     }
 
     private void FixedUpdate()
@@ -62,25 +76,19 @@ public class AlienBehaviour : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
+        // Basic Projectile
         if (other.gameObject.GetComponent<BasicProjectile>())
         {
             print("Alien has lost health");
-            alienHealth -= bullet.projectileDamage + mech.mechDamage;
+            alienHealth -= 1;
             Destroy(other.gameObject);
         }
-        if (alienHealth <= 0)
+        // Coal Projectile
+        else if (other.gameObject.GetComponent<CoalProjectile>())
         {
-            if (randDrop <= 3)
-            {
-                randDrop = Random.Range(0, dropPrefab.Length); // Which Item?
-                if (randDrop < dropPrefab.Length)
-                {
-                    // Drop the item
-                    GameObject newDrop = Instantiate(dropPrefab[randDrop], transform.position, transform.rotation);
-                    Debug.Log("Enemy Drops Item " + randDrop + 1); // Debug
-                }
-            }
-            Destroy(gameObject);
+            print("Alien has taken massive damage");
+            alienHealth -= 5;
+            Destroy(other.gameObject);
         }
     }
 }
